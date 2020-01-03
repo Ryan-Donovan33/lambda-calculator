@@ -3,6 +3,7 @@ import Numbers from './components/ButtonComponents/NumberButtons/Numbers';
 import Operators from './components/ButtonComponents/OperatorButtons/Operators';
 import './App.css';
 import Specials from './components/ButtonComponents/SpecialButtons/Specials';
+import Display from './components/DisplayComponents/Display';
 
 // STEP 4 - import the button and display components
 // Don't forget to import any extra css/scss files you build into the correct component
@@ -20,6 +21,7 @@ function App() {
 	return (
 		<div className="container">
 			<Logo />
+			<Display />
 			<Numbers />
 			<Operators />
 			<Specials />
