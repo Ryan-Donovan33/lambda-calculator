@@ -5,7 +5,9 @@ const NumberButton = (props) => {
 
 	return (
 		<React.Fragment>
-			<button className="num-button">{props.num}</button>
+			<button onClick={props.handleClick} value={props.num} className="num-button">
+				{props.num}
+			</button>
 		</React.Fragment>
 	);
 };

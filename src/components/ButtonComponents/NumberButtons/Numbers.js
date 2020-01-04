@@ -11,11 +11,18 @@ import { numbers } from '../../../data'
 
 const Numbers = () => {
 	const [ nums ] = useState(numbers);
+	const { setResult, currentNum, setCurrentNum } = props;
+
+	const handleClick = (e) => {
+		setCurrentNum((prevState) => {
+			return prevState + e.target.value;
+		});
+	};
 	// STEP 2 - add the imported data to state
 	return (
 		<React.Fragment>
 			{nums.map((num, idx) => {
-				return <NumberButton key={idx} num={num} />;
+				return <NumberButton handleClick={handleClick} value={num} key={idx} num={num} />;
 			})}
 		</React.Fragment>
 	);
