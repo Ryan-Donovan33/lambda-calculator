@@ -9,10 +9,22 @@ const Specials = () => {
 	// STEP 2 - add the imported data to state
 	const [ spCalc ] = useState(specials);
 
+	const handleClick = (e) => {
+		console.log(e.target.value, 'clicked a special op');
+	};
+
 	return (
 		<React.Fragment>
 			{spCalc.map((command, idx) => {
-				return <SpecialButton command={command} key={idx} />;
+				return (
+					<SpecialButton
+						handleClick={handleClick}
+						value={command}
+						name={command}
+						command={command}
+						key={idx}
+					/>
+				);
 			})}
 		</React.Fragment>
 	);

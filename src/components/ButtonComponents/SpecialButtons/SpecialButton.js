@@ -4,7 +4,10 @@ const SpecialButton = (props) => {
 	// console.log(props)
 	return (
 		<React.Fragment>
-			<button className="special-button"> {props.command} </button>
+			<button onClick={props.handleClick} value={props.value} className="special-button">
+				{' '}
+				{props.command}{' '}
+			</button>
 		</React.Fragment>
 	);
 };
