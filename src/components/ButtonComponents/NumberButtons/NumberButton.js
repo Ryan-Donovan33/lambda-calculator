@@ -4,9 +4,9 @@ const NumberButton = (props) => {
 	// console.log(props)
 
 	return (
-		<div>
-			<button>{props.num}</button>
-		</div>
+		<React.Fragment>
+			<button className="num-button">{props.num}</button>
+		</React.Fragment>
 	);
 };
 

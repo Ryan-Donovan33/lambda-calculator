@@ -3,9 +3,9 @@ import React from 'react';
 const SpecialButton = (props) => {
 	// console.log(props)
 	return (
-		<div>
-			<button> {props.command} </button>
-		</div>
+		<React.Fragment>
+			<button className="special-button"> {props.command} </button>
+		</React.Fragment>
 	);
 };
 

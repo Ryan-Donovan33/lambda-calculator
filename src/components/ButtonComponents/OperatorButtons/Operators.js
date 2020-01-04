@@ -9,11 +9,11 @@ const Operators = () => {
 	const [ ops ] = useState(operators);
 	// STEP 2 - add the imported data to state
 	return (
-		<div>
+		<React.Fragment>
 			{ops.map((operator, idx) => {
 				return <OperatorButton operator={operator.char} key={idx} />;
 			})}
-		</div>
+		</React.Fragment>
 	);
 };
 

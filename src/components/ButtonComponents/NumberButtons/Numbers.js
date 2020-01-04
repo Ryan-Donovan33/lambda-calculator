@@ -13,11 +13,11 @@ const Numbers = () => {
 	const [ nums ] = useState(numbers);
 	// STEP 2 - add the imported data to state
 	return (
-		<div>
+		<React.Fragment>
 			{nums.map((num, idx) => {
 				return <NumberButton key={idx} num={num} />;
 			})}
-		</div>
+		</React.Fragment>
 	);
 };
 

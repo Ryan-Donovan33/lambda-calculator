@@ -10,11 +10,11 @@ const Specials = () => {
 	const [ spCalc ] = useState(specials);
 
 	return (
-		<div>
+		<React.Fragment>
 			{spCalc.map((command, idx) => {
 				return <SpecialButton command={command} key={idx} />;
 			})}
-		</div>
+		</React.Fragment>
 	);
 };
 
