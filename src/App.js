@@ -24,16 +24,21 @@ function App() {
 			<Display />
 			<section className="body">
 				<div className="columnOne">
-					<Specials />
-					<Numbers />
+					<Specials setCurrentNum={setCurrentNum} currentNum={currentNum} />
+					<Numbers setCurrentNum={setCurrentNum} result={result} setResult={setResult} />
 				</div>
 				<div className="columnTwo">
-					<Operators />
+					<Operators
+						lastOperation={lastOperation}
+						setLastOperation={setLastOperation}
+						result={result}
+						setResult={setResult}
+						setCurrentNum={setCurrentNum}
+						currentNum={currentNum}
+					/>
 				</div>
 			</section>
-			<div className="App">
-				{/* STEP 4 - Render your components here and be sure to properly import/export all files */}
-			</div>
+			<div className="App" />
 		</div>
 	);
 }
