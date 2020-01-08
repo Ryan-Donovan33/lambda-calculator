@@ -10,8 +10,7 @@ import { numbers } from '../../../data'
 //Import your array data to from the provided data file
 
 const Numbers = () => {
-	const [ nums ] = useState(numbers);
-	const { setResult, currentNum, setCurrentNum } = props;
+	const [ nums, setCurrentNum ] = useState(numbers);
 
 	const handleClick = (e) => {
 		setCurrentNum((prevState) => {

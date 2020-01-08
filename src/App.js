@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Numbers from './components/ButtonComponents/NumberButtons/Numbers';
 import Operators from './components/ButtonComponents/OperatorButtons/Operators';
 import './App.scss';
@@ -24,17 +24,17 @@ function App() {
 			<Display />
 			<section className="body">
 				<div className="columnOne">
-					<Specials setCurrentNum={setCurrentNum} currentNum={currentNum} />
-					<Numbers setCurrentNum={setCurrentNum} result={result} setResult={setResult} />
+					<Specials />
+					<Numbers />
 				</div>
 				<div className="columnTwo">
 					<Operators
-						lastOperation={lastOperation}
-						setLastOperation={setLastOperation}
-						result={result}
-						setResult={setResult}
-						setCurrentNum={setCurrentNum}
-						currentNum={currentNum}
+					// lastOperation={lastOperation}
+					// setLastOperation={setLastOperation}
+					// result={result}
+					// setResult={setResult}
+					// setCurrentNum={setCurrentNum}
+					// currentNum={currentNum}
 					/>
 				</div>
 			</section>
